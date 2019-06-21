@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'docker.sh'
+                bitbucketStatusNotify buildState: "SUCCESSFUL"
             }
         }
         stage('Deploy') {
