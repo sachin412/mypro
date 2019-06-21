@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                apt install apache2
+                sleep 5
             }
         }
         stage('Test') {
