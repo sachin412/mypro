@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh docker.sh
+                sh 'docker.sh'
             }
         }
         stage('Deploy') {
