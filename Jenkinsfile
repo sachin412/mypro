@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                apt install docker
+                apt install apache2
             }
         }
         stage('Test') {
