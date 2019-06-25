@@ -1,0 +1,63 @@
+{
+  "data": {
+    "repository": {
+      "url": "https://github.com/jwo/react-hover-image",
+      "pullRequest": {
+        "number": 4,
+        "url": "https://github.com/jwo/react-hover-image/pull/4",
+        "author": {
+          "avatarUrl": "https://avatars0.githubusercontent.com/u/123075?v=4",
+          "login": "jwo",
+          "resourcePath": "/jwo",
+          "url": "https://github.com/jwo"
+        },
+        "commits": {
+          "nodes": [
+            {
+              "commit": {
+                "commitUrl": "https://github.com/jwo/react-hover-image/commit/3398892fa4352a8939db9a9908aec20fab3e5f10",
+                "oid": "3398892fa4352a8939db9a9908aec20fab3e5f10",
+                "status": {
+                  "state": "SUCCESS",
+                  "contexts": [
+                    {
+                      "state": "SUCCESS",
+                      "targetUrl": "https://codeclimate.com/github/jwo/react-hover-image/pull/4",
+                      "description": "All good!",
+                      "context": "codeclimate"
+                    },
+                    {
+                      "state": "SUCCESS",
+                      "targetUrl": "https://travis-ci.org/jwo/react-hover-image/builds/293220122?utm_source=github_status&utm_medium=notification",
+                      "description": "The Travis CI build passed",
+                      "context": "continuous-integration/travis-ci/pr"
+                    },
+                    {
+                      "state": "SUCCESS",
+                      "targetUrl": "https://travis-ci.org/jwo/react-hover-image/builds/293220075?utm_source=github_status&utm_medium=notification",
+                      "description": "The Travis CI build passed",
+                      "context": "continuous-integration/travis-ci/push"
+                    },
+                    {
+                      "state": "SUCCESS",
+                      "targetUrl": "https://coveralls.io/builds/13904971",
+                      "description": "Coverage remained the same at 92.308%",
+                      "context": "coverage/coveralls"
+                    },
+                    {
+                      "state": "SUCCESS",
+                      "targetUrl": "https://example.com/build/status",
+                      "description": "Building...",
+                      "context": "readme-good/status"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+
