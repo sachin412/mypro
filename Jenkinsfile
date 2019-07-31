@@ -1,21 +1,12 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                sleep 5
-            }
-        }
-        stage('Test') {
-            steps {
-                bitbucketStatusNotify buildState: "SUCCESSFUL"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
+ pipeline {    
+	 agent { 
+		 docker { image 'node:7-alpine' }  
+	 }
+	 stages {
+		 stage('Test') {   
+			 steps {
+				 sh 'node --version'
+			 }
+		 }
+	 }
+ }  		
