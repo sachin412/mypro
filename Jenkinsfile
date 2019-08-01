@@ -1,20 +1,14 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
+        stage('Build image') {
             steps {
-                sleep 5
-            }
-        }
-        stage('Test') {
-            steps {
-                bitbucketStatusNotify buildState: "SUCCESSFUL"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'Starting to build docker image'
+
+                script {
+                    def customImage = docker.build("my-image:${env.BUILD_ID}")
+                    customImage.push()
+                }
             }
         }
     }
