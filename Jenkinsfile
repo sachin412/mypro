@@ -1,14 +1,14 @@
 pipeline {
-    agent any
+    agent none
     stages {
-        stage('Build image') {
-            steps {
-                echo 'Starting to build docker image'
-
-                script {
-                    def customImage = docker.build("my-image:${env.BUILD_ID}")
-                    customImage.push()
+        stage('Build') {
+            agent {
+                docker {
+                    image 'python:3.5.1'
                 }
+            }
+            steps {
+                sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
     }
