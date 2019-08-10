@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker {
+                jenkins {
                     image 'python:3.5.1'
                 }
             }
