@@ -1,10 +1,11 @@
 pipeline {
-       agent  {label 'docker'}
+    agent {  
+        docker { image 'node:7-alpine' }   
+    }
     stages { 
         stage('Test') {
-            agent {  
-        docker { image 'node:7-alpine' }   
-    } 
+            echo 'Execute test here'
+              
             steps {   
                 sh 'node --version' 
             }
