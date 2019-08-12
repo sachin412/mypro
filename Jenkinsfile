@@ -4,7 +4,7 @@ pipeline {
        }
   stages { 
      stage('Test') { 
-      agent { label 'ubuntu' }
+      agent { label 'docker' }
          steps { 
         sh 'node --version' 
       }
