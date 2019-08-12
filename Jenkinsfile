@@ -4,9 +4,10 @@ pipeline {
     }
     stages { 
         stage('Test') {
-            echo 'Execute test here'
               
             steps {   
+                
+            echo 'Execute test here'
                 sh 'node --version' 
             }
         }
