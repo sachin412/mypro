@@ -3,9 +3,9 @@ pipeline {
     docker { image 'node:7-alpine' } 
        }
   stages { 
+     stage('Test') { 
       agent { label 'ubuntu' }
-     stage('Test') {  
-      steps { 
+         steps { 
         sh 'node --version' 
       }
     }
