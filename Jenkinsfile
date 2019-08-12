@@ -1,12 +1,12 @@
 pipeline {
-  agent {
-    label 'whatever'
-  }
-  stages {
-    stage('build') {
-      steps {
-        sh "./build-artifact.sh"
-          }
-       }
+  agent { 
+    docker { image 'node:7-alpine' } 
+       } 
+  stages { 
+    stage('Test') {  
+      steps { 
+        sh 'node --version' 
+      }
     }
+  }
 }
