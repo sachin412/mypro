@@ -1,15 +1,12 @@
 pipeline {
-    agent any
-    stages {
-        stage('Example') {
-            steps {
-                sh ' sudo docker run ubuntu'
+    agent {
+        docker { image 'node:7-alpine' }  
+    }    
+    stages {  
+        stage('Test') {  
+            steps {    
+                sh 'node --version'
             }
-        }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
         }
     }
 }
