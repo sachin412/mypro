@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh 'docker run ubuntu'
+                sh ' sudo docker run ubuntu'
             }
         }
     }
