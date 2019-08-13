@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                docker run ubuntu:16.04
+                docker run ubuntu
             }
         }
     }
