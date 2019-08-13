@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello World'
+                docker run ubuntu:16.04
             }
         }
     }
