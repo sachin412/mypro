@@ -2,7 +2,7 @@ pipeline {
   agent {   
     docker {            
       image 'jenkins/jenkins'   
-      args '-v /home/ubuntu/data:/root/.m2' 
+      args '-v /home/ubuntu/data:/var/jenkins_home' 
     }
   }
   stages {  
