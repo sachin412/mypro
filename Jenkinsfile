@@ -1,14 +1,14 @@
 pipeline {  
   agent {   
     docker {            
-      image 'maven:3-alpine'   
+      image 'jenkins/jenkins'   
       args '-v /home/ubuntu/data:/root/.m2' 
     }
   }
   stages {  
     stage('Build') {   
       steps {   
-        sh 'mvn -B'
+        echo "hello world"
       }
     
     }
