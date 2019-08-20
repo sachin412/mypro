@@ -1,11 +1,16 @@
 pipeline {  
-  agent { dockerfile true }   
+  agent {   
+    docker {            
+      image 'maven:3-alpine'   
+      args '-v /home/ubuntu/data:/root/.m2' 
+    }
+  }
   stages {  
-    stage('Test') {
-      steps      {      
-        sh 'node --version'     
-        sh 'svn --version'
+    stage('Build') {   
+      steps {   
+        sh 'mvn -B'
       }
+    
     }
   }
 }
