@@ -1,10 +1,21 @@
 pipeline {
-    agent any
+    agent none
     stages {
-        stage ('Clone') {
-            steps {
-                git branch: 'master', url: "https://github.com/jfrog/project-examples.git"
+        stage('Back-end') {
+            agent {
+                docker { image 'node' }
             }
-      }
-    }  
+            steps {
+                sh 'echo "hello"'
+            }
+        }
+        stage('Front-end') {
+            agent {
+                docker { image 'node' }
+            }
+            steps {
+                sh 'echo "hello"'
+            }
+        }
+    }
 }
